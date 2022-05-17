@@ -13,7 +13,7 @@
     @php
         $passwordOptions = ['class' => 'form-control'];
         if ($formMode === 'create') {
-            $passwordOptions = array_merge($passwordOptions, ['required' => 'required']);
+            $passwordOptions = array_merge($passwordOptions, array_values(['required' => 'required']));
         }
     @endphp
     {!! Form::password('password', $passwordOptions) !!}
